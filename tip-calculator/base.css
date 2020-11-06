@@ -1,0 +1,22 @@
+body {
+    font-size: 18px;
+}
+
+.container { 
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+input {
+    display: block;
+    margin-bottom: 15px;
+}
+
+.btn {
+    padding: 8px 12px;
+    border-radius: 20px;
+    background-color: #333333;
+    color: #ffffff;
+    border: none;
+
+}
