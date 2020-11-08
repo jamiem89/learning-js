@@ -18,5 +18,30 @@ input {
     background-color: #333333;
     color: #ffffff;
     border: none;
+}
 
+.results, .results__contain {
+    display: none;
+}
+
+.results--active {
+    display: block;
+    background-color: #000000;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+.results--active .results__contain {
+    display: block;
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -250px;
+    margin-top: -250px;
 }
