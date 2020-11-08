@@ -1,7 +1,9 @@
-console.log('bingo time');
 
 const calcButton = document.querySelector('button');
-console.log(calcButton);
+const results = document.querySelector('.results');
+
+const resultsClose = document.querySelector('.results__close');
+
 
 calcButton.addEventListener('click', function(event){
     console.log('button pressed');
@@ -13,15 +15,15 @@ calcButton.addEventListener('click', function(event){
 
     const people = parseInt(document.querySelector(`input[name="people"]`).value);
 
-    const results = document.querySelector('.results');
-
-    results.innerHTML = `
-        <h2>Your results</h2>
-        <p>People: ${people}<br>
-        Your amount: £${Math.round(bill / people)}<br>
-        Tip percent: ${tip}<br>
-        Tip amount: £${bill / tip}<br></br>
-        Your total: ${Math.round((bill / people) + (bill / tip))}.
+    results.querySelector('p').innerText = `People: ${people}
+    Your amount: £${Math.round(bill / people)}
+    Tip percent: ${tip}
+    Tip amount: £${bill / tip}
+    Your total: £${Math.round((bill / people) + (bill / tip))}.
     `
+    results.classList.add('results--active');
+});
 
+resultsClose.addEventListener('click', function(){
+    results.classList.remove('results--active');
 });
