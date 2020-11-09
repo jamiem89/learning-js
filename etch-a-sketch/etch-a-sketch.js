@@ -104,6 +104,7 @@ function handleKey(e) {
 function clearCanvas() {
     canvas.classList.add('shake');
     ctx.clearRect(0,0, width, height);
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
     canvas.addEventListener('animationend', function() {
         canvas.classList.remove('shake');
     },
