@@ -7,6 +7,7 @@ const speed = 25;
 let direction = 'right';
 
 function handleKeyDown(event) {
+    //Only proceed if an arrow key is pressed
     if(!event.key.includes('Arrow')) return;
     
     switch(event.key) {
@@ -31,6 +32,7 @@ function handleKeyDown(event) {
             direction = 'right';
             break;
         default:
+            //Just in case
             console.log('wrong key');
             break;
     }
