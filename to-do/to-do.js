@@ -1,4 +1,4 @@
-// Grab some items we're gonna needed
+// Grab some items we're gonna need
 const list = document.querySelector('.to-do');
 const addButton = document.querySelector('.add-button');
 const addInput = document.querySelector('.add-input')
@@ -13,6 +13,8 @@ function removeRow(removeButton) {
 function addRow(e) {
     //stop the form from reloading the page
     e.preventDefault();
+
+    //Only add item if one available
     if(addInput.value) {
         const toAdd = addInput.value;
 
@@ -47,10 +49,8 @@ function addDelButtons() {
 };
 
 // Remove default from form submit
-
 addButton.addEventListener('click', addRow);
 
 // Fire delete button function
-
 addDelButtons();
 
